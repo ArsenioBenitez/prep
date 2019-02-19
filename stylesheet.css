@@ -6,7 +6,19 @@ body{
 
 
 }
-div.header{
+#goodvisual{
+  border-style: solid;
+  border-color: black;
+  background-image: url("b_v.jpg");
+  width: 1200px;
+}
+#badvisual{
+  border-style: solid;
+  border-color: black;
+  background-image: url("b_v.jpg");
+  width: 1200px;
+}
+#paragraph{
   border-style: solid;
   border-color: black;
   width: 1200px;
