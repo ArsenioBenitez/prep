@@ -4,7 +4,6 @@ body{
   border-color: : #ccff4c 30 round;
 /*  background: #ffe194 ;*/
 
-
 }
 #goodvisual{
   border-style: solid;
@@ -13,6 +12,8 @@ body{
   background-size:cover;
   background-repeat: no-repeat;
   background-blend-mode: lighten;
+  float:left;
+  clear:left;
   width: 1200px;
 }
 #badvisual{
@@ -22,10 +23,14 @@ body{
   background-size:cover;
   background-repeat: no-repeat;
   background-blend-mode: lighten;
+  float:left;
+  clear:left;
   width: 1200px;
 }
 #paragraph{
   border-style: solid;
   border-color: black;
+  float:none;
+  clear:both;
   width: 1200px;
 }
