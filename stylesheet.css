@@ -14,7 +14,7 @@ body{
   background-blend-mode: lighten;
   float:left;
   clear:left;
-  width: 1200px;
+  width: 900px;
 }
 #badvisual{
   border-style: solid;
@@ -25,7 +25,7 @@ body{
   background-blend-mode: lighten;
   float:left;
   clear:left;
-  width: 1200px;
+  width: 900px;
 }
 #paragraph{
   border-style: solid;
