@@ -12,10 +12,12 @@ body{
 #goodvisual{
   float:left;
   width: 500px;
+  height: 600px;
 }
 #badvisual{
   float:right;
   width: 500px;
+  height: 600px;
 }
 #paragraph{
   border-style: solid;
