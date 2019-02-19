@@ -10,12 +10,18 @@ body{
   border-style: solid;
   border-color: black;
   background-image: url("b_v.jpg");
+  background-size:cover;
+  background-repeat: no-repeat;
+  background-blend-mode: lighten;
   width: 1200px;
 }
 #badvisual{
   border-style: solid;
   border-color: black;
   background-image: url("b_v.jpg");
+  background-size:cover;
+  background-repeat: no-repeat;
+  background-blend-mode: lighten;
   width: 1200px;
 }
 #paragraph{
