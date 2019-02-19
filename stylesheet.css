@@ -12,15 +12,14 @@ body{
 #goodvisual{
   border-style: solid;
   border-color: black;
-  background-image: url("g_v.jpg");
   float:left;
-  width: 900px;
+  width: 600px;
 }
 #badvisual{
   border-style: solid;
   border-color: black;
   float:right;
-  width: 900px;
+  width: 600px;
 }
 #paragraph{
   border-style: solid;
@@ -31,10 +30,10 @@ body{
   width: 900px;
 }
 #gv{
-  width: 400px;
-  height: 300px;
+  width: 500px;
+  height: 500px;
 }
 #bv{
-  width: 400px;
-  height: 300px;
+  width: 500px;
+  height: 500px;
 }
