@@ -13,22 +13,13 @@ body{
   border-style: solid;
   border-color: black;
   background-image: url("g_v.jpg");
-  background-size:cover;
-  background-repeat: no-repeat;
-  background-blend-mode: lighten;
   float:left;
-  clear:left;
   width: 900px;
 }
 #badvisual{
   border-style: solid;
   border-color: black;
-  background-image: url("b_v.jpg");
-  background-size:cover;
-  background-repeat: no-repeat;
-  background-blend-mode: lighten;
-  float:left;
-  clear:left;
+  float:right;
   width: 900px;
 }
 #paragraph{
@@ -37,5 +28,13 @@ body{
   margin-top: 400px;
   float:none;
   clear:both;
-  width: 1200px;
+  width: 900px;
+}
+#gv{
+  width: 400px;
+  height: 300px;
+}
+#bv{
+  width: 400px;
+  height: 300px;
 }
