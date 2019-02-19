@@ -2,6 +2,8 @@ body{
   background-color: #ffa8df;
   border: 40px solid transparent;
   border-color: : #ccff4c 30 round;
+  display: block;
+  position: float;
 
 
 /*  background: #ffe194 ;*/
@@ -14,8 +16,6 @@ body{
   background-size:cover;
   background-repeat: no-repeat;
   background-blend-mode: lighten;
-  display: block;
-  position: float;
   float:left;
   clear:left;
   width: 900px;
@@ -27,8 +27,6 @@ body{
   background-size:cover;
   background-repeat: no-repeat;
   background-blend-mode: lighten;
-  display: block;
-  position: float;
   float:left;
   clear:left;
   width: 900px;
@@ -36,8 +34,7 @@ body{
 #paragraph{
   border-style: solid;
   border-color: black;
-  display: block;
-  position: float;
+  margin-top: 400px;
   float:none;
   clear:both;
   width: 1200px;
