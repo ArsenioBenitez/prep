@@ -3,6 +3,7 @@ body{
   border: 40px solid transparent;
   border-color: : #ccff4c 30 round;
   position: float;
+  display: block;
 /*  background: #ffe194 ;*/
 
 }
