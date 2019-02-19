@@ -10,16 +10,12 @@ body{
 
 }
 #goodvisual{
-  border-style: solid;
-  border-color: black;
   float:left;
-  width: 600px;
+  width: 500px;
 }
 #badvisual{
-  border-style: solid;
-  border-color: black;
   float:right;
-  width: 600px;
+  width: 500px;
 }
 #paragraph{
   border-style: solid;
