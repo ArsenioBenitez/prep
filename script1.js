@@ -5,4 +5,4 @@ var median = 12;
 nums.forEach(function(d){
   mean += d;
 });
-document.getElementById("p").innerHTML= "List:" + nums+"</br> Mean: "+ mean/(nums.length-1) +"</br> Mode: "+ mode +"</br>Median: " +median;
+document.getElementById("p").innerHTML= "List:" + nums+"</br> Mean: "+ mean/(nums.length) +"</br> Mode: "+ mode +"</br>Median: " +median;
