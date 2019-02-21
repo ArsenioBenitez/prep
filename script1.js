@@ -4,7 +4,7 @@ var mode = "2,6,43";
 var median = nums[(nums.length - 1) / 2];
 nums.forEach(function(d){
   mean += d;
-}
+});
 document.getElementById("p").innerHTML= "List:" + nums;
 document.getElementById("p").innerHTML=  "Mean: "+ mean ;
 document.getElementById("p").innerHTML=  "Mode: "+ mode ;
