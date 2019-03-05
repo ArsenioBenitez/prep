@@ -1,5 +1,5 @@
 var dataset;
 d3.csv("hunger.csv",function(data){
     dataset = data;
-    genTable();
+
 })
