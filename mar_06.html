@@ -11,87 +11,69 @@
 
 
 
-    var dataP = d3.csv("rolemodel.csv");
-    dataP.then(function(data)
-    {
-      drawChart(data,"#csv");
-
-    }
-    ,
-    function(err)
-    {
-      console.log(err);
-    })
-    var drawChart = function(data,tag)
-    {
-      var width = 300;
-      var height = 400;
-      var barWidth = width/data.length;
-      var svg = d3.select(tag)
-        .attr("width",width)
-        .attr("height",height)
-        .attr("fill","black");
+     var dataP = d3.csv("rolemodel.csv");
+     dataP.then(function(data)
+     {
+       drawChart(data);
+     }
+     ,
+     function(err)
+     {
+       console.log(err);
+     })
 
 
-      svg.selectAll("rect")
-        .data(data)
-        .enter()
-        .append("rect")
-        .attr("x",function(d,i)
-        {
-            return i * barWidth;
-        })
-        .attr("y",function(d)
-        {
-          return height - parseInt(d.num) * 10;
-        })
-        .attr("width",barWidth)
-        .attr("height",function(d)
-        {
-          return parseInt(d.num) * 10;
-        })
-        .attr("fill",function(d)
-        {
-          return d.color;
-        }
 
-        )
-        var legend = svg.append("g")
-                        .attr("class", "legend")
-                        .attr("x", 400)
-                        .attr("y", 50)
-                        .attr("height", 300)
-                        .attr("width", 200);
-        legend.selectAll('g').data(data)
-              .enter()
-              .append('g')
-              .each(function(d, i)
-               {
-                var g = d3.select(this);
-                g.append("rect")
-                 .attr("x", 200)
-                 .attr("y", i*15)
-                 .attr("width", 10)
-                 .attr("height", 10)
-                 .attr("fill",function(d)
-                 {
-                   return d.color;
-                });
+     var drawChart = function(data)
+     {
+       var width = 400;
+       var height = 400;
+       var barWidth = width/data.length;
+       var svg = d3.select("#csv")
+         .attr("width",width)
+         .attr("height",height)
+         .attr("fill","black");
 
-                g.append("text")
-                 .attr("x",  250)
-                 .attr("y", i * 15 + 12)
-                 .attr("height",30)
-                 .attr("width",100)
-                 .text(function(d)
-                 {
-                   return d.color;
-                 });
 
-                });
-    }
-      </script>
-      <svg tag id = "csv"></svg>
+       svg.selectAll("rect")
+         .data(data)
+         .enter()
+         .append("rect")
+         .attr("x",function(d,i)
+         {
+             return i * barWidth;
+         })
+         .attr("y",function(d)
+         {
+           return height - parseInt(d.Percent_women) * 10;
+         })
+         .attr("width",barWidth)
+         .attr("height",function(d)
+         {
+           return parseInt(d.Percent_women) * 10;
+         })
+         .attr("fill",function(d){
+           if (d.Field == "Engineering")
+           {
+             return "blue";
+           }
+           if (d.Field == "Physics")
+           {
+             return "grey";
+           }
+           if (d.Field == "Computer Science")
+           {
+             return "red";
+           }
+
+         })
+
+     }
+
+
+
+     </script>
+    <svg tag id = "csv"></svg>
 
   </body>
 </html>
