@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <script type="text/javascript">
+
+
+
+
+    var dataP = d3.csv("rolemodel.csv");
+    dataP.then(function(data)
+    {
+      drawChart(data,"#csv");
+
+    }
+    ,
+    function(err)
+    {
+      console.log(err);
+    })
+    var drawChart = function(data,tag)
+    {
+      var width = 300;
+      var height = 400;
+      var barWidth = width/data.length;
+      var svg = d3.select(tag)
+        .attr("width",width)
+        .attr("height",height)
+        .attr("fill","black");
+
+
+      svg.selectAll("rect")
+        .data(data)
+        .enter()
+        .append("rect")
+        .attr("x",function(d,i)
+        {
+            return i * barWidth;
+        })
+        .attr("y",function(d)
+        {
+          return height - parseInt(d.num) * 10;
+        })
+        .attr("width",barWidth)
+        .attr("height",function(d)
+        {
+          return parseInt(d.num) * 10;
+        })
+        .attr("fill",function(d)
+        {
+          return d.color;
+        }
+
+        )
+        var legend = svg.append("g")
+                        .attr("class", "legend")
+                        .attr("x", 400)
+                        .attr("y", 50)
+                        .attr("height", 300)
+                        .attr("width", 200);
+        legend.selectAll('g').data(data)
+              .enter()
+              .append('g')
+              .each(function(d, i)
+               {
+                var g = d3.select(this);
+                g.append("rect")
+                 .attr("x", 200)
+                 .attr("y", i*15)
+                 .attr("width", 10)
+                 .attr("height", 10)
+                 .attr("fill",function(d)
+                 {
+                   return d.color;
+                });
+
+                g.append("text")
+                 .attr("x",  250)
+                 .attr("y", i * 15 + 12)
+                 .attr("height",30)
+                 .attr("width",100)
+                 .text(function(d)
+                 {
+                   return d.color;
+                 });
+
+                });
+    }
+      </script>
+      <svg tag id = "csv"></svg>
+
+  </body>
+</html>
