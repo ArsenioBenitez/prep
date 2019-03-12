@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body style = "background-color:powderblue;">
+    <a href = "https://developers.google.com/chart/interactive/docs/gallery/barchart"><font size="+2"> Visualization:Basic bar chart with multiple series</font> </a>
+    <p>The main animation in this visualization is that when one hovers over the bars a text box pops up with the name of the City and its population size.<br>
+        The best way to accomplish this using d3 is by calling on() with mouseover (it's equivalent to CSS's hover).<br>
+     </p>
+     <pre>
+      svg.selectAll('rect')
+        .data(dataset)
+        .enter()
+        .append("rect")//ommitting set attributes
+        .on("mouseover",function()
+        {
+          d3.select(this)
+            .attr("fill","orange")
+            //code to creat text box with info
+        })
+     </pre>
+  </body>
+</html>
